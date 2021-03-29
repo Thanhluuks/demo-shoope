@@ -204,7 +204,7 @@
     font-weight: 400;   
 }
 
-/* Modal Form */
+/* Modal Register Form */
 .modal__body {
     width: 500px;
     background-color: var(--white-color);
@@ -217,12 +217,14 @@
 .modal__header {
     display: flex;
     justify-content: space-between;
-    padding: 16px 0;
+    padding: 16px 12px;
+    margin-top: 12px;
 }
 .modal__header-login {
     font-size: 2.2rem;
-    font-weight: 400;
+    font-weight: 500;
     color: var(--text-color);
+
 }
 .modal__header-swich {
     font-size: 1.6rem;
@@ -239,6 +241,7 @@
     outline: none;
     border-radius: 3px;
     border: 1px solid var(--border-color);
+    padding-left: 8px;
 }
 
 .model__form-input:focus {
@@ -297,4 +300,63 @@
 }.modal__socials-i-gg {
     font-size: 1.8rem;
 
+}
+
+/* Modal Login Form */
+
+.modal__auther-option {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.modal__option-title {
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.modal__option-seperate {
+    display: block;
+    height: 13px;
+    border-right: 1px solid #c1bfbf;
+    margin: 0 12px;
+    width: 1px;
+}
+.modal__option-forget {
+    color: var(--primary-color);
+}
+.modal__option-help {
+    color: #949494;
+}
+
+/* Header_Search style */
+.header__search {
+    height: var(--search-height);
+    display: flex;
+    align-items: center;
+}
+
+.header__search-logo {
+    display: flex;
+    align-items: center;
+    width: 200px;
+}
+.img-logo {
+    width: 150px;
+    fill: var(--white-color);
+}
+
+.header__search-search {
+    background-color: var(--white-color);
+    flex: 1;
+    height: 40px;
+}
+.header__search-cart {
+    width: 150px;
+    text-align: center;
+}
+
+.cart-icon {
+    color: var(--white-color);
+    font-size: 2rem;
 }

@@ -4,6 +4,9 @@
     --text-color: #333;
     --primary-color: #EE4D2D;
     --border-color: #bdbdbd;
+    --header-height: 120px;
+    --nav-height: 34px;
+    --search-height: calc(var(--header-height) - var(--nav-height));
 }
 * {
     box-sizing: inherit;
@@ -15,7 +18,9 @@ html {
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
-
+ul {
+    padding: 0;
+}
 .grid {
     width: 1200px;
     max-width: 100%;
@@ -39,6 +44,15 @@ html {
         opacity: 1;
     }
 }
+
+@keyframes growUp {
+    from {
+        transform: scale(var(--growUp-from));
+    }
+    to {
+        transform: scale(var(--growUp-to));
+    }
+}
 /* Modal */
 .modal {
     position: fixed;
@@ -54,6 +68,7 @@ html {
     height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.4);
+    animation: fadeIn linear 0.2s;
 }
 
 .modal__body {
@@ -61,6 +76,9 @@ html {
     background-color: var(--white-color);
     border-radius: 5px;
     z-index: 1;
+    animation: growUp ease-in 0.2s;
+    --growUp-from: 0.7;
+    --growUp-1: 1;
 }
 
 /* Button style */
@@ -80,6 +98,7 @@ html {
     justify-content: center;
     align-items: center;
     padding: 0 12px;
+    line-height: 1.6rem;
 }
 .btn.btn--s {
     height: 28px;
