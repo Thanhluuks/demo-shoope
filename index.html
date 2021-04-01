@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>THANH LUU SHOP</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="./asess/css/base.css">
     <link rel="stylesheet" href="./asess/css/main.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
 </head>
@@ -109,10 +109,45 @@
                     
                 </div>
                 <div class="header__search-search">
+                    <div class="header__search-input">
+                        <input type="text" placeholder="Nhập tìm kiếm sản phẩm" class="header__search-search-input">
+                        <div class="header__search-history">
+                            <p class="header__search-history-header">Lịch sử tìm kiếm</p>
+                            <ul class="header__search-history-lists">
+                                <li class="header__search-history-item">
+                                    <a href="">Điện thoại Iphone 12 Pro Max</a>
+                                </li>
+                                <li class="header__search-history-item">
+                                    <a href="">Điện thoại Xiaomi Pro </a>
+                                </li>
+                            </ul>
+                        </div>
 
+                    </div>
+                    <div class="header__search-selection">
+                        <span class="selection__content">Trong Shop</span>
+                        <i class="selection__icon fas fa-chevron-down"></i>
+                        <ul class="header__search-options">
+                            <li class="header__search-item">
+                                <span>Trong Shop</span>
+                                <i class="fas fa-check"></i>
+                            </li>
+                            <li class="header__search-item">
+                                <span>Ngoài Shop</span>
+                                <i class="fas fa-check"></i>
+                            </li>
+                        </ul>
+                    </div>
+                    <i class="header__search-icon fas fa-search"></i>
                 </div>
                 <div class="header__search-cart">
-                    <i class="cart-icon fas fa-shopping-cart"></i>
+                    <div class="header__cart-wrap">
+                        <i class="cart-icon fas fa-shopping-cart"></i>
+                        <div class="header__cart-wrap-list header__cart-wrap-list--no-cart">
+                            <img src="./asess/img/no-cart.png" alt="" class="no-cart">
+                            <span class="header__cart-status">Chưa có sản phẩm</span>
+                        </div>
+                    </div>
                 </div>
             </nav>
 

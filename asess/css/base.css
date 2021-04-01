@@ -18,9 +18,6 @@ html {
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
-ul {
-    padding: 0;
-}
 .grid {
     width: 1200px;
     max-width: 100%;
