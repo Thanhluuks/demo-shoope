@@ -18,6 +18,7 @@ html {
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
+/* Responsive */
 .grid {
     width: 1200px;
     max-width: 100%;
@@ -29,8 +30,32 @@ html {
 .grid__row {
     display: flex;
     flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
 }
 
+.grid__column-2 {
+    width: 16.6667%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.grid__column-2-4 {
+    width: 20%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.grid__column-10 {
+    width: 83.3333%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+
+.move-right {
+    float: right;
+}
 /* Animation */
 
 @keyframes fadeIn {
@@ -82,7 +107,7 @@ html {
 
 .btn {
     height: 34px;
-    min-width: 142px;
+    min-width: 120px;
     font-size: 1.5rem;
     border-radius: 2px;
     text-decoration: none;
@@ -91,11 +116,14 @@ html {
     cursor: pointer;
     color: var(--text-color);
     background-color: transparent;
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     padding: 0 12px;
     line-height: 1.6rem;
+}
+.btn.btn--white {
+    background-color: var(--white-color);
 }
 .btn.btn--s {
     height: 28px;
@@ -111,4 +139,56 @@ html {
 .btn.btn--disable {
     background-color: #ccc6c5;
     color: #868686;
+}
+/* select input */
+.select-input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--white-color);
+    min-width: 180px;
+    height: 34px;
+    margin-left: 4px;
+    font-size: 1.4rem;
+    padding: 0 12px;
+    position: relative;
+}
+
+.select-input__icon {
+    color: #817272;
+}
+
+.select-input:hover .select-input__list {
+    display: block;
+}
+
+.select-input__list::before {
+    content: "";
+    width: 100%;
+    position: absolute;
+    top: -8px;
+    right: 0;
+    height: 15px;
+}
+
+.select-input__list {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 24px;
+    background-color: var(--white-color);
+    list-style: none;
+    padding: 0;
+    display: none;
+
+}
+.select-input__link {
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    color: var(--text-color);
+    padding: 8px 16px;
+}
+.select-input__link:hover {
+    color: var(--primary-color);
 }
