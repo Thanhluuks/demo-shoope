@@ -1,5 +1,10 @@
 /* Mobile & table */
 @media (max-width: 1023px) {
+    :root {
+        --header-height: 68px;
+        --nav-height: 0px;
+    }
+
     .hide-on-mobile-table {
         display: none;
     }
@@ -32,14 +37,9 @@
     .hide-on-table {
         display: none;
     }
-    :root {
-        --white-color: #fff;
-        --bacl-color: #000;
-        --text-color: #333;
-        --primary-color: #EE4D2D;
-        --border-color: #bdbdbd;
-        --header-height: 68px;
-        --nav-height: 0px;
+    
+    .pagination-page__item {
+        margin: 0 8px;
     }
 
     
