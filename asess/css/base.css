@@ -1,0 +1,219 @@
+:root {
+    --white-color: #fff;
+    --bacl-color: #000;
+    --text-color: #333;
+    --primary-color: #EE4D2D;
+    --border-color: #bdbdbd;
+    --header-height: 120px;
+    --nav-height: 34px;
+    --search-height: calc(var(--header-height) - var(--nav-height));
+}
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; /* 1rem = 10px*/
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+/* Responsive */
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.grid__column-2 {
+    width: 16.6667%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.grid__column-2-4 {
+    width: 20%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.grid__column-10 {
+    width: 83.3333%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+
+.move-right {
+    float: right;
+}
+/* Animation */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes growUp {
+    from {
+        transform: scale(var(--growUp-from));
+    }
+    to {
+        transform: scale(var(--growUp-to));
+    }
+}
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+}
+
+.modal__overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    animation: fadeIn linear 0.2s;
+}
+
+.modal__body {
+    margin: auto;
+    background-color: var(--white-color);
+    border-radius: 5px;
+    z-index: 1;
+    animation: growUp ease-in 0.2s;
+    --growUp-from: 0.7;
+    --growUp-1: 1;
+}
+
+/* Button style */
+
+.btn {
+    height: 34px;
+    min-width: 120px;
+    font-size: 1.5rem;
+    border-radius: 2px;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-color);
+    background-color: transparent;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 12px;
+    line-height: 1.6rem;
+}
+.btn.btn--white {
+    background-color: var(--white-color);
+}
+.btn.btn--s {
+    height: 28px;
+    padding: 0 8px;
+}
+.btn.btn--normal:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+.btn.btn--primary {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+.btn.btn--disable {
+    background-color: #ccc6c5;
+    color: #868686;
+}
+/* select input */
+.select-input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--white-color);
+    min-width: 180px;
+    height: 34px;
+    margin-left: 4px;
+    font-size: 1.4rem;
+    padding: 0 12px;
+    position: relative;
+}
+
+.select-input__icon {
+    color: #817272;
+}
+
+.select-input:hover .select-input__list {
+    display: block;
+    z-index: 1;
+}
+
+.select-input__list::before {
+    content: "";
+    width: 100%;
+    position: absolute;
+    top: -8px;
+    right: 0;
+    height: 15px;
+}
+
+.select-input__list {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 24px;
+    background-color: var(--white-color);
+    list-style: none;
+    padding: 0;
+    display: none;
+
+}
+.select-input__link {
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    color: var(--text-color);
+    padding: 8px 16px;
+}
+.select-input__link:hover {
+    color: var(--primary-color);
+}
+/* Pagination */
+
+.pagination {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+    justify-content: center;
+}
+
+.pagination-page__item {
+    --height: 30px;
+    text-decoration: none;
+    display: block;
+    height: var(--height);
+    width: 40px;
+    font-size: 1.6rem;
+    color: #939393;
+    line-height: var(--height);
+    text-align: center;
+    margin: 0 12px;
+    /* font-weight: 300; */
+}
+.pagination-page--active .pagination-page__item {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border-radius: 2px;
+}
+
+.pagination-page--active:hover .pagination-page__item {
+    opacity: 0.8;
+}

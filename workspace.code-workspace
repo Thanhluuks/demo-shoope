@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "..\\W3_Band\\thanhluuks.github.io"
+		},
+		{
+			"path": "..\\BEM STAND"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "demo-shoope"
+	}
+}
